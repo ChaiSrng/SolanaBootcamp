@@ -1,14 +1,18 @@
 fn main() {
     println!("Welcome to Fizz Buzz Program");
-    fizzy();
+    let fbcount = fizzy();
+    println!("Total fizz-buzz count is {}", fbcount);
 }
 
-fn fizzy(){
+fn fizzy()-> i32{
     let mut count = 0;
+    let mut fbcount = 0;
     while count < 301 {
         
         if count % 3 == 0 && count % 5 == 0{
-            println!("fizz buzz");}
+            println!("fizz buzz");
+            fbcount +=1;
+        }
         else if count % 3 == 0{
             println!("fizz");
         }
@@ -18,4 +22,5 @@ fn fizzy(){
 
         count += 1;
     }
+    fbcount
 }
